@@ -1,0 +1,10 @@
+/*global.css*/
+
+:root {
+    --color-white: #fff;
+    --color-brand-primary: #2158a3;
+    --color-brand-primary-hover: #003275;
+    --color-brand-primary-pressed: #00275c;
+    --color-brand-secondary-hover: #eaf3ff;
+    --color-brand-secondary-pressed: #deecff;
+}
