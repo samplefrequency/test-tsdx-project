@@ -95,13 +95,17 @@ const StyledButton = styled.button<{ variant: string; props: any }>`
   ${({ variant }) => variant === 'tertiary' && tertiaryCss};
 `;
 
-export const ButtonStyledComponent: FC<StyledButtonProps> = props => {
+export const ButtonStyledComponent: FC<StyledButtonProps> = ({
+  variant,
+  children,
+  ...props
+}) => {
   let ref = useRef<any>();
   let { buttonProps } = useButton(props, ref);
 
   return (
-    <StyledButton {...buttonProps} variant={props.variant} ref={ref}>
-      {props.children || 'Styled component'}
+    <StyledButton {...buttonProps} variant={variant} ref={ref}>
+      {children || 'Styled component'}
     </StyledButton>
   );
 };
