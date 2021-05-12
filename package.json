@@ -35,6 +35,25 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
+    "modulePaths": [
+      "<rootDir>/src"
+    ]
+  },
   "name": "test-tsdx-project",
   "author": "Eric Josue",
   "module": "dist/test-tsdx-project.esm.js",
@@ -56,6 +75,9 @@
     "@storybook/addon-links": "^6.2.9",
     "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.8",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
     "@types/styled-components": "^5.1.9",
@@ -73,6 +95,7 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^6.2.9",
     "react-aria": "^3.6.0",
     "styled-components": "^5.3.0"
   }

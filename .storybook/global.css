@@ -2,9 +2,12 @@
 
 :root {
     --color-white: #fff;
+    --color-warm-gray: #F5F5F4;
     --color-brand-primary: #2158a3;
     --color-brand-primary-hover: #003275;
     --color-brand-primary-pressed: #00275c;
     --color-brand-secondary-hover: #eaf3ff;
     --color-brand-secondary-pressed: #deecff;
+    --color-text-disabled: #d4d4d4;
+    --color-border-disabled: #D6D3D1
 }
