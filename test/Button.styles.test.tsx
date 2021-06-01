@@ -1,5 +1,6 @@
 import React from 'react';
 import StyledButton from '../src/Button/Button.styles';
+import { ButtonStyledComponent } from '../src/Button/Button';
 import 'jest-styled-components';
 import { render, screen } from '@testing-library/react';
 
@@ -12,11 +13,7 @@ describe('Default styled button', () => {
   it('renders default styles', () => {
     render(<StyledButton>test</StyledButton>);
     const button = screen.getByRole('button', { name: /test/i });
-    expect(button).toHaveStyleRule(
-      'background-color',
-      'var(--color-white)',
-      {}
-    );
+    expect(button).toHaveStyleRule('background-color', 'var(--color-white)');
     expect(button).toHaveStyleRule(
       'border',
       '1px solid var(--color-brand-primary)'
@@ -31,6 +28,13 @@ describe('Default styled button', () => {
 
   it('matches snapshot', () => {
     const { container } = render(<StyledButton>test</StyledButton>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('matches reexported snapshot', () => {
+    const { container } = render(
+      <ButtonStyledComponent>test</ButtonStyledComponent>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
